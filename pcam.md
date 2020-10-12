@@ -1,7 +1,8 @@
 # **PCAM Game Of Life Paralelo**
 
 ## Partition
-![alt text](capture.png "Title")
+<img src="/pcamimages/Capture.png" alt="My cool logo"/>
+
 ## Communication
 
 ## Agglomeration
