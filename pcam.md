@@ -22,6 +22,9 @@ T4 = 1 vez
 ### **Arbol Particion Datos**
 <img src="pcamimages\diagramas\Diapositiva2.PNG" alt="Dos loops externos"/>
 
+### **Visualizacion Arbol Particion de datos con diferentes instancias de T2,T1**
+<img src="pcamimages\diagramas\Diapositiva3.PNG" alt="Dos loops externos"/>
+
 
 ## **Agglomeration**
 
