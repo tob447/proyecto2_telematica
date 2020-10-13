@@ -27,8 +27,7 @@ T4 = 1 vez
 
 
 ## **Agglomeration**
-<img src="pcamimages\diagramas\2.PNG" alt="Dos loops externos"/>
-<img src="pcamimages\diagramas\3.PNG" alt="Dos loops externos"/>
 
-
+<img src="pcamimages\2.PNG" alt="Dos loops externos"/>
+<img src="pcamimages\3.PNG" alt="Dos loops externos"/>
 ## **Mapping**
