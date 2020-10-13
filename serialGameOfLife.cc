@@ -8,7 +8,12 @@ int main(int argc, char* argv[]){
    int boardHeight=5;
  
    int gameboard[3][5]={
-      {0,0,0,0,1},
+      {0,1,0,0,1},
+      {0,0,1,0,0},
+      {0,0,1,0,0}
+   };
+   int resultboard[3][5]={
+        {0,1,0,0,1},
       {0,0,1,0,0},
       {0,0,1,0,0}
    };
@@ -44,21 +49,21 @@ int main(int argc, char* argv[]){
  
            //living cell with less than 2 neighbors dies
            if (currentcell && livingNeighbors<2){
-               currentcell=0;
+               resultboard[x][y]=0;
            }
            //living cell with 2 or 3 neighbors lives on
            if (currentcell && ((livingNeighbors==2) || (livingNeighbors==3))){
-               currentcell=1;
+              resultboard[x][y]=1;
            }
  
            //living cell with more than 3 neighbors dies
            if (currentcell && livingNeighbors>3){
-               currentcell==0;
+               resultboard[x][y]==0;
            }
  
            //dead cell with exactly 3 neigbors comes alive
            if(!currentcell && livingNeighbors==3) {
-               currentcell=1;
+               resultboard[x][y]=1;
            }
        }
    }
@@ -67,7 +72,7 @@ int main(int argc, char* argv[]){
    for (int x=0 ; x<boardWidth; x++){
        cout << endl;
        for (int y=0; y<boardHeight; y++){
-           cout << gameboard[x][y];
+           cout << resultboard[x][y];
  
        }
    }
