@@ -30,6 +30,7 @@ T4 = 1 vez
 
 <img src="pcamimages\2.PNG" alt="Dos loops externos"/>
 <img src="pcamimages\3.PNG" alt="Dos loops externos"/>
+
 ## **Mapping**
 <img src="pcamimages\Captura6.PNG" alt="Dos loops externos"/>
 
