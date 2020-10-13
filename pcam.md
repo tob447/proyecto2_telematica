@@ -32,3 +32,5 @@ T4 = 1 vez
 <img src="pcamimages\3.PNG" alt="Dos loops externos"/>
 ## **Mapping**
 <img src="pcamimages\Capture6.PNG" alt="Dos loops externos"/>
+
+Nuestro procesador no tendria limite ya que le vamos subiendo de apoquitos hasta que ya empiece a perder eficiencia V.E
