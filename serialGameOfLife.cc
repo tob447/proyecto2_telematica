@@ -21,16 +21,22 @@ int main(int argc, char* argv[]){
            //iterate through neighbors
            for (int i =-1 ; i<=1; i++){
                for(int j =-1; j<=1;j++){
- 
-                   //check not current cell
-                   if(!(i==0 && j==0)){
- 
-                       //add living neighbir
-                       if (gameboard[x+i][x+y]){
-                           livingNeighbors++;
-                       }
-                   }
-                  
+
+                   //check if out of bounds 
+                   if ((x+i>=0 && x+i<boardWidth) && (y+j>=0) && (y+j<boardHeight)){
+                       //check not current cell
+                        if(!(i==0 && j==0)){
+    
+                            //add living neighbir
+                            if (gameboard[x+i][y+j]){
+                                livingNeighbors++;
+                                cout << "gameboard" <<"["<<x <<"]"<<"["<<y <<"]" <<endl;
+                                cout << "vecinos" <<"["<<x+i <<"]"<<"["<<y+j <<"]" <<endl;
+                                cout << livingNeighbors<<endl;
+                            }
+                    }
+
+                   }                  
                }
            }
            //Apply cell rules to current cell
@@ -59,7 +65,7 @@ int main(int argc, char* argv[]){
  
  
    for (int x=0 ; x<boardWidth; x++){
-       cout << "/n";
+       cout << endl;
        for (int y=0; y<boardHeight; y++){
            cout << gameboard[x][y];
  
