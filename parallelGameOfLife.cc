@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <omp.h>
 using namespace std;
  
  
@@ -18,6 +19,7 @@ int main(int argc, char* argv[]){
       {0,0,1,0,0}
    };
    // Iterate thorugh grid
+   #pragma omp simd
    for (int x=0 ; x<boardWidth; x++){
        for (int y=0; y<boardHeight; y++){
  
