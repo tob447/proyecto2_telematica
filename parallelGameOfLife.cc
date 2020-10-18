@@ -1,10 +1,14 @@
 #include <string>
 #include <iostream>
 #include <omp.h>
+
 using namespace std;
  
  
 int main(int argc, char* argv[]){
+
+  const int nt = omp_get_max_threads();
+
    int boardWidth=3;
    int boardHeight=5;
  
@@ -19,10 +23,14 @@ int main(int argc, char* argv[]){
       {0,0,1,0,0}
    };
    // Iterate thorugh grid
-   #pragma omp simd
+   // parallel start  
+#pragma omp parallel shared(boardHeight,boardWidth,gameboard,resultboard)
+{
+   // for loop parallelization
+  #pragma omp for simd
    for (int x=0 ; x<boardWidth; x++){
        for (int y=0; y<boardHeight; y++){
- 
+	 cout << omp_get_thread_num()<< endl;
            int livingNeighbors = 0;
           
            //iterate through neighbors
@@ -37,9 +45,6 @@ int main(int argc, char* argv[]){
                             //add living neighbir
                             if (gameboard[x+i][y+j]){
                                 livingNeighbors++;
-                                cout << "gameboard" <<"["<<x <<"]"<<"["<<y <<"]" <<endl;
-                                cout << "vecinos" <<"["<<x+i <<"]"<<"["<<y+j <<"]" <<endl;
-                                cout << livingNeighbors<<endl;
                             }
                     }
 
@@ -69,6 +74,7 @@ int main(int argc, char* argv[]){
            }
        }
    }
+}
  
  
    for (int x=0 ; x<boardWidth; x++){

@@ -35,9 +35,6 @@ int main(int argc, char* argv[]){
                             //add living neighbir
                             if (gameboard[x+i][y+j]){
                                 livingNeighbors++;
-                                cout << "gameboard" <<"["<<x <<"]"<<"["<<y <<"]" <<endl;
-                                cout << "vecinos" <<"["<<x+i <<"]"<<"["<<y+j <<"]" <<endl;
-                                cout << livingNeighbors<<endl;
                             }
                     }
 
